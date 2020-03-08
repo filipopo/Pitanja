@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from re import compile
 from os import getenv
 from os.path import join,dirname
@@ -8,11 +9,8 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
  
-# Create .env file path.
-dotenv_path = join(dirname(__file__), '.env')
-
-# Load it
-load_dotenv(dotenv_path)
+# Create .env file path and load it
+load_dotenv(join(dirname(__file__), '.env'))
 
 conn = connect(
 	host=getenv("DB_Host"),
