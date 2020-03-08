@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Pitanja</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand">Pitanja</a>
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ url_for('draw') }}">Izvlači</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ url_for('setup') }}">Menjaj pitanja</a>
+				</li> 
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		{% for message in get_flashed_messages() %}
+		<div class="alert alert-warning">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			{{ message }}
+		</div>
+		{% endfor %}
+	</div>
+	<br>
+	{% block content %}
+	{% endblock %}
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

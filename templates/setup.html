@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            <label for="file">Izaberite fajl:</label><br>
+            <input type="file" id="file" name="file"><br>
+            <br>
+            <button class="btn btn-primary" type="submit">Pošalji</button>
+        </form>
+    </div>
+{% endblock %}
