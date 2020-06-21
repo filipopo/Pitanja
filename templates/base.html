@@ -7,14 +7,23 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand">Pitanja</a>
-		<div class="collapse navbar-collapse">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="{{ url_for('draw') }}">Izvlači</a>
+					<a class="nav-link" href="{{ url_for('draw') }}" role="button">Izvlači</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{ url_for('setup') }}">Menjaj pitanja</a>
+					<a class="nav-link" href="{{ url_for('setup') }}" role="button">Menjaj pitanja</a>
 				</li> 
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="{{ url_for('setup') }}" role="button">Logout</a>
+				</li>
 			</ul>
 		</div>
 	</nav>

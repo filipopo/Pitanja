@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="container">
-        <form method="POST">
-            <label for="file">Izaberite fajl:</label><br>
-            <input type="file" id="file" name="file"><br>
+        <form method="POST" enctype="multipart/form-data">
+			<p>Pošaljite listu pitanja u formatu<br>
+			"(broj).(tekst)":</p>
+            <input type="file" name="file" multiple files><br>
+			<a href="https://textract.readthedocs.io/en/stable/#currently-supporting">Podržani formati</a><br>
             <br>
             <button class="btn btn-primary" type="submit">Pošalji</button>
         </form>
